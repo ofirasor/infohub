@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TableObject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Name>BORROWER</Name>
+  <ID>tbl_BORROWER</ID>
+  <Columns>
+    <Column name="ID" id="tblCol_3b80a0cc710a40a3b6e3afd82d36764d" index="0" datatype="Text" mandatory="true" />
+    <Column name="AGE" id="tblCol_2c9b0772baac404f94e601616455fb03" index="1" datatype="Integer" />
+    <Column name="IQ" id="tblCol_bf078722568a44488790d3af8ef210e9" index="2" datatype="Integer" />
+    <Column name="LOC" id="tblCol_0f9e2a261a1649bc8de1232ef85f04ea" index="3" datatype="Text" />
+    <Column name="LOANED_SUM" id="tblCol_cc0f8a43be0f47efa0c2884d9b848902" index="4" datatype="Integer" />
+  </Columns>
+  <IndexesList>
+    <Index id="1" pk="true" unique="true" instanceOnly="true" columnsIdsList="tblCol_3b80a0cc710a40a3b6e3afd82d36764d" />
+  </IndexesList>
+  <EnrichmentList />
+  <LazyDataUpdate syncMethod="Inherited" performEvery="1.00:00:00">
+    <TruncateBeforeSync>true</TruncateBeforeSync>
+  </LazyDataUpdate>
+</TableObject>

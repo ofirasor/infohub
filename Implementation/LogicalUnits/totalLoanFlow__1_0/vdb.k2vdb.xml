@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<VirtualDB xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" version="3.6.0.9">
+  <Name>vdb</Name>
+  <RootView>DECISION_ROOT</RootView>
+  <LuLazyDataUpdate syncMethod="None" performEvery="1.00:00:00" />
+  <Tables>
+    <Table>DECISION_BORROWER</Table>
+    <Table>DECISION_ROOT</Table>
+    <Table>DECISION_LOAN</Table>
+  </Tables>
+  <TablesProperties>
+    <TableProperties name="DECISION_BORROWER">
+      <Populations>
+        <Population id="pop_DECISION_BORROWER" name="pop_DECISION_BORROWER" order="2" disabled="false" enrichment="false" />
+      </Populations>
+    </TableProperties>
+    <TableProperties name="DECISION_ROOT">
+      <Populations>
+        <Population id="pop_DECISION_ROOT" name="pop_DECISION_ROOT" order="1" disabled="false" enrichment="false" />
+      </Populations>
+    </TableProperties>
+    <TableProperties name="DECISION_LOAN">
+      <Populations>
+        <Population id="pop_DECISION_LOAN" name="pop_DECISION_LOAN" order="3" disabled="false" enrichment="false" />
+      </Populations>
+    </TableProperties>
+  </TablesProperties>
+  <EnrichmentsOrderList />
+  <ReferencesList />
+  <Relations />
+  <DatabaseRelations>
+    <Relation id="29">
+      <From tableType="TableObject" table="DECISION_ROOT" column="DECISION_ROOT_id" columnId="tblCol_4755f6467a2a4df4880c4fac309b0dad" />
+      <To tableType="TableObject" table="DECISION_BORROWER" populationObjectName="pop_DECISION_BORROWER" column="LOC" columnId="queryCol_3" />
+    </Relation>
+    <Relation id="30">
+      <From tableType="TableObject" table="DECISION_BORROWER" column="DECISION_BORROWER_id" columnId="tblCol_7f682b5212354d4c8c912f4458222d9f" />
+      <To tableType="TableObject" table="DECISION_LOAN" populationObjectName="pop_DECISION_LOAN" column="BORROWER_ID" columnId="queryCol_1" />
+    </Relation>
+  </DatabaseRelations>
+  <PreVCsSqlScript />
+  <PostVCsSqlScript />
+  <Indexes />
+  <LudbProperties />
+  <DiagramGraph>
+    <Graph version="3.6.0.9" name="vdb.k2vdb.xml" lastPartID="30">
+      <Node id="0" partID="0" name="DECISION_BORROWER" isRootView="false" pos="482 162" size="257 136" listGroupSize="250 100" viewType="Table">
+        <TableProperties>{"TableName":"DECISION_BORROWER","TablePopulationPropertiesList":[{"ID":"pop_DECISION_BORROWER","Name":"pop_DECISION_BORROWER","Order":2,"Disabled":false,"IsEnrichment":false}]}</TableProperties>
+      </Node>
+      <Node id="1" partID="11" name="DECISION_ROOT" isRootView="true" pos="123 93" size="257 136" listGroupSize="250 100" viewType="Table">
+        <TableProperties>{"TableName":"DECISION_ROOT","TablePopulationPropertiesList":[{"ID":"pop_DECISION_ROOT","Name":"pop_DECISION_ROOT","Order":1,"Disabled":false,"IsEnrichment":false}]}</TableProperties>
+      </Node>
+      <Node id="2" partID="18" name="DECISION_LOAN" isRootView="false" pos="831 330" size="257 136" listGroupSize="250 100" viewType="Table">
+        <TableProperties>{"TableName":"DECISION_LOAN","TablePopulationPropertiesList":[{"ID":"pop_DECISION_LOAN","Name":"pop_DECISION_LOAN","Order":3,"Disabled":false,"IsEnrichment":false}]}</TableProperties>
+      </Node>
+      <Link from="3" to="4" partID="29" linkType="Database" pointsArr="380 154.636719 390 154.636719 472 223.636719 482 223.636719" fromNodePartID="11" fromNodeColumnName="DECISION_ROOT_id" toNodePartID="0" toNodeColumnName="LOC" toNodePopulationObjectName="pop_DECISION_BORROWER" />
+      <Link from="5" to="6" partID="30" linkType="Database" pointsArr="739 255.819 749 255.819 821 375.545563 831 375.545563" fromNodePartID="0" fromNodeColumnName="DECISION_BORROWER_id" toNodePartID="18" toNodeColumnName="BORROWER_ID" toNodePopulationObjectName="pop_DECISION_LOAN" />
+    </Graph>
+  </DiagramGraph>
+</VirtualDB>

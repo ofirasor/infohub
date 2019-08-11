@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TablePopulationObject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ID>pop_DECISION_LOAN</ID>
+  <PopulationObjectName>pop_DECISION_LOAN</PopulationObjectName>
+  <TableName>DECISION_LOAN</TableName>
+  <RootItemID>query_query_LOAN</RootItemID>
+  <LazyDataUpdate syncMethod="Inherited" performEvery="1.00:00:00">
+    <TruncateBeforeSync>false</TruncateBeforeSync>
+  </LazyDataUpdate>
+  <SimpleObject>false</SimpleObject>
+  <InputArguments>
+    <Arg name="BORROWER_ID" id="queryCol_1" dataType="Text" index="1" />
+  </InputArguments>
+  <ItemsList>
+    <Item xsi:type="DBQueryDataSave" id="query_query_LOAN" name="query_LOAN" nodeOrder="0" module="DBQuery" mapObjectModule="DBQuery" connName="customer_db">
+      <OutputsList>
+        <Output xsi:type="DBQueryDataSaveColumn" id="queryCol_1" name="BORROWER_ID" dataType="Text" index="1" />
+        <Output xsi:type="DBQueryDataSaveColumn" id="queryCol_2" name="TYPE" dataType="Text" index="2" />
+        <Output xsi:type="DBQueryDataSaveColumn" id="queryCol_3" name="SUM" dataType="Integer" index="3" />
+      </OutputsList>
+      <SQL><![CDATA[SELECT * FROM LOAN]]></SQL>
+    </Item>
+  </ItemsList>
+  <LinksList>
+    <Link partId="28" fromNodeOrder="0" fromItemID="query_query_LOAN" fromColID="queryCol_1" toItemID="DECISION_LOAN" toColID="tblCol_6fca37ea22dc40669c8ea38c75c18f5c" />
+    <Link partId="29" fromNodeOrder="0" fromItemID="query_query_LOAN" fromColID="queryCol_2" toItemID="DECISION_LOAN" toColID="tblCol_d6224ecf16da46268e8b9f790f422d97" />
+    <Link partId="30" fromNodeOrder="0" fromItemID="query_query_LOAN" fromColID="queryCol_3" toItemID="DECISION_LOAN" toColID="tblCol_9144954e16314f8ea71180d6f09195c4" />
+  </LinksList>
+  <ModeKeyColumnIDs />
+  <DiagramGraph>
+    <Graph name="DECISION_LOAN.pop_DECISION_LOAN.k2tablePop.xml" lastPartID="30">
+      <TableNode partID="0" name="DECISION_LOAN" pos="542.1458 86.85417" width="309.324158" />
+      <DBQueryNode partID="23" name="customer_db" pos="184 365.763031" size="253 108.291656" isRoot="true">
+        <DBQuery>{"Name":"query_LOAN","ID":"query_query_LOAN","ConnName":"customer_db","SQL":"SELECT * FROM LOAN","ColumnsList":[{"ID":"queryCol_0","Name":"ID","DataType":"Text","Index":0,"IsInputArgument":false},{"ID":"queryCol_1","Name":"BORROWER_ID","DataType":"Text","Index":1,"IsInputArgument":true},{"ID":"queryCol_2","Name":"TYPE","DataType":"Text","Index":2,"IsInputArgument":false},{"ID":"queryCol_3","Name":"SUM","DataType":"Integer","Index":3,"IsInputArgument":false}]}</DBQuery>
+      </DBQueryNode>
+      <Link partID="28" from="0" to="1" pointsArr="437 413.8724 447 413.8724 532.1458 117.890633 542.1458 117.890633" fromNodePartID="23" fromNodeColumnName="BORROWER_ID" toNodePartID="0" toNodeColumnName="DECISION_BORROWER_id" />
+      <Link partID="29" from="2" to="3" pointsArr="437 425.9453 447 425.9453 532.1458 129.963547 542.1458 129.963547" fromNodePartID="23" fromNodeColumnName="TYPE" toNodePartID="0" toNodeColumnName="LOAN_TYPE" />
+      <Link partID="30" from="4" to="5" pointsArr="437 438.01825 447 438.01825 532.1458 142.036453 542.1458 142.036453" fromNodePartID="23" fromNodeColumnName="SUM" toNodePartID="0" toNodeColumnName="LOAN_AMOUNT" />
+    </Graph>
+  </DiagramGraph>
+</TablePopulationObject>

@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<VirtualDB xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" version="3.6.0.9">
+  <Name>vdb</Name>
+  <RootView>DECISION_ROOT</RootView>
+  <LuLazyDataUpdate syncMethod="None" performEvery="1.00:00:00" />
+  <Tables>
+    <Table>DECISION_ROOT</Table>
+  </Tables>
+  <TablesProperties>
+    <TableProperties name="DECISION_ROOT">
+      <Populations>
+        <Population id="pop_DECISION_ROOT" name="pop_DECISION_ROOT" order="1" disabled="false" enrichment="false" />
+      </Populations>
+    </TableProperties>
+  </TablesProperties>
+  <EnrichmentsOrderList />
+  <ReferencesList />
+  <Relations />
+  <DatabaseRelations />
+  <PreVCsSqlScript />
+  <PostVCsSqlScript />
+  <Indexes />
+  <LudbProperties />
+  <DiagramGraph>
+    <Graph version="3.6.0.9" name="vdb.k2vdb.xml" lastPartID="26">
+      <Node id="0" partID="0" name="DECISION_ROOT" isRootView="true" pos="11 14" size="257 136" listGroupSize="250 100" viewType="Table">
+        <TableProperties>{"TableName":"DECISION_ROOT","TablePopulationPropertiesList":[{"ID":"pop_DECISION_ROOT","Name":"pop_DECISION_ROOT","Order":1,"Disabled":false,"IsEnrichment":false}]}</TableProperties>
+      </Node>
+    </Graph>
+  </DiagramGraph>
+</VirtualDB>

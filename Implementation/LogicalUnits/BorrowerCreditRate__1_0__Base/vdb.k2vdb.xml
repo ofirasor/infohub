@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<VirtualDB xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" version="5.3.1.2">
+  <Name>vdb</Name>
+  <RootView>DECISION_ROOT</RootView>
+  <LuLazyDataUpdate syncMethod="None" performEvery="1.00:00:00" />
+  <IidFinderProp />
+  <Tables>
+    <Table>DECISION_ROOT</Table>
+  </Tables>
+  <TablesProperties>
+    <TableProperties name="DECISION_ROOT">
+      <Populations>
+        <Population id="pop_DECISION_ROOT" name="pop_DECISION_ROOT" order="1" disabled="false" enrichment="false" />
+      </Populations>
+    </TableProperties>
+  </TablesProperties>
+  <EnrichmentsOrderList />
+  <ReferencesList />
+  <Relations />
+  <DatabaseRelations />
+  <PreVCsSqlScript />
+  <PostVCsSqlScript />
+  <Indexes />
+  <LudbProperties />
+  <DiagramGraph>
+    <Graph version="5.3.1.2" name="vdb.k2vdb.xml">
+      <Node name="DECISION_ROOT" pos="11 14" size="257 136" listGroupSize="250 100" viewType="Table" />
+    </Graph>
+  </DiagramGraph>
+</VirtualDB>

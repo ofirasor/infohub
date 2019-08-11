@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TableObject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Name>DECISION_BORROWER</Name>
+  <ID>DECISION_BORROWER</ID>
+  <Version>3.6.0.9</Version>
+  <LazyDataUpdate syncMethod="Inherited" performEvery="1.00:00:00">
+    <TruncateBeforeSync>true</TruncateBeforeSync>
+  </LazyDataUpdate>
+  <SerializationName>DECISION_BORROWER</SerializationName>
+  <Columns>
+    <Column name="DECISION_ROOT_id" id="tblCol_0efe46b8871b4259be2a1212418a7a99" index="0" datatype="Text" mandatory="true" serializationType="None" />
+    <Column name="DECISION_BORROWER_id" id="tblCol_274d49bdf7c14f1e81561bfdb7458946" index="1" datatype="Text" mandatory="true" serializationType="None" />
+  </Columns>
+  <IndexesList />
+  <EnrichmentList />
+</TableObject>

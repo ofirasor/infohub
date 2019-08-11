@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TablePopulationObject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ID>pop_DECISION_BORROWER</ID>
+  <PopulationObjectName>pop_DECISION_BORROWER</PopulationObjectName>
+  <TableName>DECISION_BORROWER</TableName>
+  <RootItemID>query_query_BORROWER</RootItemID>
+  <LazyDataUpdate syncMethod="Inherited" performEvery="1.00:00:00">
+    <TruncateBeforeSync>false</TruncateBeforeSync>
+  </LazyDataUpdate>
+  <SimpleObject>false</SimpleObject>
+  <InputArguments>
+    <Arg name="ID" id="queryCol_0" dataType="Text" index="0" />
+    <Arg name="LOC" id="queryCol_3" dataType="Text" index="3" />
+  </InputArguments>
+  <ItemsList>
+    <Item xsi:type="DBQueryDataSave" id="query_query_BORROWER" name="query_BORROWER" nodeOrder="0" module="DBQuery" mapObjectModule="DBQuery" connName="customer_db">
+      <OutputsList>
+        <Output xsi:type="DBQueryDataSaveColumn" id="queryCol_0" name="ID" dataType="Text" index="0" />
+        <Output xsi:type="DBQueryDataSaveColumn" id="queryCol_3" name="LOC" dataType="Text" index="3" />
+      </OutputsList>
+      <SQL><![CDATA[SELECT * FROM BORROWER]]></SQL>
+    </Item>
+  </ItemsList>
+  <LinksList>
+    <Link partId="24" fromNodeOrder="0" fromItemID="query_query_BORROWER" fromColID="queryCol_3" toItemID="DECISION_BORROWER" toColID="tblCol_d10cd134339140bebb1c202a1e42cd01" />
+    <Link partId="25" fromNodeOrder="0" fromItemID="query_query_BORROWER" fromColID="queryCol_0" toItemID="DECISION_BORROWER" toColID="tblCol_7f682b5212354d4c8c912f4458222d9f" />
+  </LinksList>
+  <ModeKeyColumnIDs />
+  <DiagramGraph>
+    <Graph name="DECISION_BORROWER.pop_DECISION_BORROWER.k2tablePop.xml" lastPartID="25">
+      <TableNode partID="0" name="DECISION_BORROWER" pos="647.8789 95.890625" width="309.324219" />
+      <DBQueryNode partID="18" name="customer_db" pos="169 215.799484" size="253 120.364578" isRoot="true">
+        <DBQuery>{"Name":"query_BORROWER","ID":"query_query_BORROWER","ConnName":"customer_db","SQL":"SELECT * FROM BORROWER","ColumnsList":[{"ID":"queryCol_0","Name":"ID","DataType":"Text","Index":0,"IsInputArgument":true},{"ID":"queryCol_1","Name":"AGE","DataType":"Integer","Index":1,"IsInputArgument":false},{"ID":"queryCol_2","Name":"IQ","DataType":"Integer","Index":2,"IsInputArgument":false},{"ID":"queryCol_3","Name":"LOC","DataType":"Text","Index":3,"IsInputArgument":true},{"ID":"queryCol_4","Name":"LOANED_SUM","DataType":"Integer","Index":4,"IsInputArgument":false}]}</DBQuery>
+      </DBQueryNode>
+      <Link partID="24" from="0" to="1" pointsArr="422 288.0547 432 288.0547 637.8789 126.927078 647.8789 126.927078" fromNodePartID="18" fromNodeColumnName="LOC" toNodePartID="0" toNodeColumnName="DECISION_ROOT_id" />
+      <Link partID="25" from="2" to="3" pointsArr="422 251.835953 432 251.835953 637.8789 139 647.8789 139" fromNodePartID="18" fromNodeColumnName="ID" toNodePartID="0" toNodeColumnName="DECISION_BORROWER_id" />
+    </Graph>
+  </DiagramGraph>
+</TablePopulationObject>

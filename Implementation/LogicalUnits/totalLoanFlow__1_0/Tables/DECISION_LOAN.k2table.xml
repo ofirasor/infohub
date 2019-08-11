@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TableObject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Name>DECISION_LOAN</Name>
+  <ID>DECISION_LOAN</ID>
+  <Version>3.6.0.9</Version>
+  <LazyDataUpdate syncMethod="Inherited" performEvery="1.00:00:00">
+    <TruncateBeforeSync>true</TruncateBeforeSync>
+  </LazyDataUpdate>
+  <SerializationName>DECISION_LOAN</SerializationName>
+  <Columns>
+    <Column name="DECISION_BORROWER_id" id="tblCol_6fca37ea22dc40669c8ea38c75c18f5c" index="0" datatype="Text" mandatory="true" serializationType="None" />
+    <Column name="LOAN_TYPE" id="tblCol_d6224ecf16da46268e8b9f790f422d97" index="1" datatype="Text" mandatory="true" serializationName="LOAN_TYPE">
+      <Comment />
+    </Column>
+    <Column name="LOAN_AMOUNT" id="tblCol_9144954e16314f8ea71180d6f09195c4" index="2" datatype="Real" mandatory="true" serializationName="LOAN_AMOUNT">
+      <Comment />
+    </Column>
+  </Columns>
+  <IndexesList />
+  <EnrichmentList />
+</TableObject>

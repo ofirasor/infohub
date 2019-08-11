@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TablePopulationObject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ID>pop_DECISION_ROOT</ID>
+  <PopulationObjectName>pop_DECISION_ROOT</PopulationObjectName>
+  <TableName>DECISION_ROOT</TableName>
+  <RootItemID>query_query_BORROWER</RootItemID>
+  <LazyDataUpdate syncMethod="Inherited" performEvery="1.00:00:00">
+    <TruncateBeforeSync>false</TruncateBeforeSync>
+  </LazyDataUpdate>
+  <SimpleObject>false</SimpleObject>
+  <InputArguments>
+    <Arg name="ID" id="queryCol_0" dataType="Text" index="0" />
+  </InputArguments>
+  <ItemsList>
+    <Item xsi:type="DBQueryDataSave" id="query_query_BORROWER" name="query_BORROWER" nodeOrder="0" module="DBQuery" mapObjectModule="DBQuery" connName="customer_db">
+      <OutputsList>
+        <Output xsi:type="DBQueryDataSaveColumn" id="queryCol_0" name="ID" dataType="Text" index="0" />
+        <Output xsi:type="DBQueryDataSaveColumn" id="queryCol_1" name="AGE" dataType="Integer" index="1" />
+        <Output xsi:type="DBQueryDataSaveColumn" id="queryCol_2" name="IQ" dataType="Integer" index="2" />
+        <Output xsi:type="DBQueryDataSaveColumn" id="queryCol_3" name="LOC" dataType="Text" index="3" />
+        <Output xsi:type="DBQueryDataSaveColumn" id="queryCol_4" name="LOANED_SUM" dataType="Integer" index="4" />
+      </OutputsList>
+      <SQL><![CDATA[SELECT * FROM BORROWER]]></SQL>
+    </Item>
+  </ItemsList>
+  <LinksList>
+    <Link partId="39" fromNodeOrder="0" fromItemID="query_query_BORROWER" fromColID="queryCol_0" toItemID="DECISION_ROOT" toColID="tblCol_5ddeed88d01d4ecab60a05081c4cb67c" />
+    <Link partId="40" fromNodeOrder="0" fromItemID="query_query_BORROWER" fromColID="queryCol_3" toItemID="DECISION_ROOT" toColID="tblCol_0fbf5f469a9845cfa817e8777993122e" />
+    <Link partId="41" fromNodeOrder="0" fromItemID="query_query_BORROWER" fromColID="queryCol_4" toItemID="DECISION_ROOT" toColID="tblCol_18d81492ec6247a88fd87b0bb9a74e04" />
+    <Link partId="42" fromNodeOrder="0" fromItemID="query_query_BORROWER" fromColID="queryCol_2" toItemID="DECISION_ROOT" toColID="tblCol_33f011265d6a4c65a8ea9b6d8347c32f" />
+    <Link partId="43" fromNodeOrder="0" fromItemID="query_query_BORROWER" fromColID="queryCol_1" toItemID="DECISION_ROOT" toColID="tblCol_e1957e1c5da3472a91232193de782e02" />
+  </LinksList>
+  <ModeKeyColumnIDs />
+  <DiagramGraph>
+    <Graph name="DECISION_ROOT.pop_DECISION_ROOT.k2tablePop.xml" lastPartID="55">
+      <TableNode partID="0" name="DECISION_ROOT" pos="590.5453 77.78125" width="309.3241" />
+      <DBQueryNode partID="33" name="customer_db" pos="146 130.690109" size="253 120.364578" isRoot="true">
+        <DBQuery>{"Name":"query_BORROWER","ID":"query_query_BORROWER","ConnName":"customer_db","SQL":"SELECT * FROM BORROWER","ColumnsList":[{"ID":"queryCol_0","Name":"ID","DataType":"Text","Index":0,"IsInputArgument":true},{"ID":"queryCol_1","Name":"AGE","DataType":"Integer","Index":1,"IsInputArgument":false},{"ID":"queryCol_2","Name":"IQ","DataType":"Integer","Index":2,"IsInputArgument":false},{"ID":"queryCol_3","Name":"LOC","DataType":"Text","Index":3,"IsInputArgument":false},{"ID":"queryCol_4","Name":"LOANED_SUM","DataType":"Integer","Index":4,"IsInputArgument":false}]}</DBQuery>
+      </DBQueryNode>
+      <Link partID="39" from="0" to="1" pointsArr="399 166.726563 409 166.726563 580.5453 108.817711 590.5453 108.817711" fromNodePartID="33" fromNodeColumnName="ID" toNodePartID="0" toNodeColumnName="DECISION_ROOT_id" />
+      <Link partID="40" from="2" to="3" pointsArr="399 202.945313 409 202.945313 580.5453 120.890625 590.5453 120.890625" fromNodePartID="33" fromNodeColumnName="LOC" toNodePartID="0" toNodeColumnName="BORROWER_LOCATION" />
+      <Link partID="41" from="4" to="5" pointsArr="399 215.018219 409 215.018219 580.5453 132.963531 590.5453 132.963531" fromNodePartID="33" fromNodeColumnName="LOANED_SUM" toNodePartID="0" toNodeColumnName="BORROWER_TOTAL_LOANED_AMOUNT" />
+      <Link partID="42" from="6" to="7" pointsArr="399 190.872391 409 190.872391 580.5453 145.036453 590.5453 145.036453" fromNodePartID="33" fromNodeColumnName="IQ" toNodePartID="0" toNodeColumnName="BORROWER_I_Q" />
+      <Link partID="43" from="8" to="9" pointsArr="399 178.799484 409 178.799484 580.5453 157.109375 590.5453 157.109375" fromNodePartID="33" fromNodeColumnName="AGE" toNodePartID="0" toNodeColumnName="BORROWER_AGE" />
+    </Graph>
+  </DiagramGraph>
+</TablePopulationObject>

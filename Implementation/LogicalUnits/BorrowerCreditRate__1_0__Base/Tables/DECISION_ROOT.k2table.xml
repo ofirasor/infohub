@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TableObject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Name>DECISION_ROOT</Name>
+  <ID>DECISION_ROOT</ID>
+  <Version>3.6.0.9</Version>
+  <EntityId>tblCol_cc7bb6e7e36241dbbdbe49c13d0438de</EntityId>
+  <LazyDataUpdate syncMethod="Inherited" performEvery="1.00:00:00">
+    <TruncateBeforeSync>true</TruncateBeforeSync>
+  </LazyDataUpdate>
+  <SerializationName>DECISION_ROOT</SerializationName>
+  <Columns>
+    <Column name="DECISION_ROOT_id" id="tblCol_cc7bb6e7e36241dbbdbe49c13d0438de" index="0" datatype="Text" mandatory="true" serializationName="DECISION_ROOT_id" />
+    <Column name="BORROWER_LOCATION" id="tblCol_c8c1b902312349089ec7154951b18acf" index="1" datatype="Text" mandatory="true" serializationName="BORROWER_LOCATION">
+      <Comment />
+    </Column>
+    <Column name="BORROWER_TOTAL_LOANED_AMOUNT" id="tblCol_ac9a4855d6724873af4825d995bfe95d" index="2" datatype="Real" mandatory="true" serializationName="BORROWER_TOTAL_LOANED_AMOUNT">
+      <Comment />
+    </Column>
+    <Column name="BORROWER_I_Q" id="tblCol_099c9ca0157342cd8d20a2ef8aaa8275" index="3" datatype="Real" mandatory="true" serializationName="BORROWER_I_Q">
+      <Comment />
+    </Column>
+    <Column name="BORROWER_AGE" id="tblCol_524fd156a83f4429836b4cb0003813ef" index="4" datatype="Real" mandatory="true" serializationName="BORROWER_AGE">
+      <Comment />
+    </Column>
+  </Columns>
+  <IndexesList />
+  <EnrichmentList />
+</TableObject>

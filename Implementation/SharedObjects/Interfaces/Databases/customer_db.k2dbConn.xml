@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DBConn xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="DBConnOracle" name="customer_db" type="Oracle" version="5.3.1.2">
+  <Active>true</Active>
+  <DataSource>bdmsdb6.sapiens.int</DataSource>
+  <PortNum>1521</PortNum>
+  <DataBase>orcl</DataBase>
+  <UserId>k_pat_customer_db_for_di</UserId>
+  <Password>XO8WQqaXkF1rVDih1tpK7XD8USxIqioOfLxES8Kn6Bw=:sZnNvNz+F85kbK+8ZkSOGAc8LIbUyPpZJJMt6FmvWPU=</Password>
+  <IsCustomConnectionString>true</IsCustomConnectionString>
+  <ConnectionStringClient>Data Source=(DESCRIPTION=(ADDRESS_LIST=(ADDRESS=(PROTOCOL=TCP)(HOST=bdmsdb6.sapiens.int)(PORT=1521)))(CONNECT_DATA=(SERVER=DEDICATED)(SID=ORCL)));User Id=k_pat_customer_db_for_di;Password=k_pat_customer_db_for_di;</ConnectionStringClient>
+  <IsCustomConnectionStringServerSide>true</IsCustomConnectionStringServerSide>
+  <ConnectionStringServerSide>jdbc:oracle:thin:@bdmsdb6.sapiens.int:1521:ORCL</ConnectionStringServerSide>
+  <MinConnectionsNumber>0</MinConnectionsNumber>
+  <MaxConnectionsNumber>60</MaxConnectionsNumber>
+  <UseSelectAsteriskInAutoCreatedQueries>true</UseSelectAsteriskInAutoCreatedQueries>
+  <CommandList />
+</DBConn>

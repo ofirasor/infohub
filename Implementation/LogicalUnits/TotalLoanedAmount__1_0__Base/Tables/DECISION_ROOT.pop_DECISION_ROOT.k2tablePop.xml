@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TablePopulationObject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ID>pop_DECISION_ROOT</ID>
+  <PopulationObjectName>pop_DECISION_ROOT</PopulationObjectName>
+  <TableName>DECISION_ROOT</TableName>
+  <RootItemID>query_query_LOCATION</RootItemID>
+  <LazyDataUpdate syncMethod="Inherited" performEvery="1.00:00:00">
+    <TruncateBeforeSync>false</TruncateBeforeSync>
+  </LazyDataUpdate>
+  <SimpleObject>true</SimpleObject>
+  <InputArguments>
+    <Arg name="ID" id="queryCol_0" dataType="Text" index="0" />
+  </InputArguments>
+  <ItemsList>
+    <Item xsi:type="DBQueryDataSave" id="query_query_LOCATION" name="query_LOCATION" nodeOrder="0" module="DBQuery" mapObjectModule="DBQuery" connName="customer_db">
+      <OutputsList>
+        <Output xsi:type="DBQueryDataSaveColumn" id="queryCol_0" name="ID" dataType="Text" index="0" />
+      </OutputsList>
+      <SQL><![CDATA[SELECT * FROM LOCATION]]></SQL>
+    </Item>
+  </ItemsList>
+  <LinksList>
+    <Link partId="16" fromNodeOrder="0" fromItemID="query_query_LOCATION" fromColID="queryCol_0" toItemID="DECISION_ROOT" toColID="tblCol_2e87abe8472b446ca65a4ade17ea67a5" />
+  </LinksList>
+  <ModeKeyColumnIDs />
+  <DiagramGraph>
+    <Graph name="DECISION_ROOT.pop_DECISION_ROOT.k2tablePop.xml" lastPartID="16">
+      <TableNode partID="0" name="DECISION_ROOT" pos="306.90976 0.9270859" width="180.15213" />
+      <DBQueryNode partID="13" name="customer_db" pos="90 -4.1640625" size="186.8378 84.14583" isRoot="true">
+        <DBQuery>{"Name":"query_LOCATION","ID":"query_query_LOCATION","ConnName":"customer_db","SQL":"SELECT * FROM LOCATION","ColumnsList":[{"ID":"queryCol_0","Name":"ID","DataType":"Text","Index":0,"IsInputArgument":true},{"ID":"queryCol_1","Name":"DISPLAY","DataType":"Text","Index":1,"IsInputArgument":false}]}</DBQuery>
+      </DBQueryNode>
+      <Link partID="16" from="0" to="1" pointsArr="276.8378 31.8723946 286.8378 31.8723946 296.90976 31.9635429 306.90976 31.9635429" fromNodePartID="13" fromNodeColumnName="ID" toNodePartID="0" toNodeColumnName="DECISION_ROOT_id" />
+    </Graph>
+  </DiagramGraph>
+</TablePopulationObject>
